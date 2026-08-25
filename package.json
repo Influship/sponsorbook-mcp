@@ -1,0 +1,49 @@
+{
+  "name": "@sponsorbook/mcp",
+  "version": "0.1.1",
+  "description": "Research YouTube sponsors, inspect sponsorship evidence, and manage Sponsorbook lists from any MCP client.",
+  "license": "MIT",
+  "type": "module",
+  "mcpName": "io.github.Influship/sponsorbook-mcp",
+  "homepage": "https://github.com/Influship/sponsorbook-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Influship/sponsorbook-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Influship/sponsorbook-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "sponsorbook",
+    "youtube",
+    "youtube-sponsors",
+    "sponsorship",
+    "sponsor-research",
+    "brand-research",
+    "creator-economy"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "sponsorbook-mcp": "bin.mjs"
+  },
+  "files": [
+    "bin.mjs",
+    "src",
+    "server.json"
+  ],
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "scripts": {
+    "test": "node --test test/config.test.mjs",
+    "test:live": "node --test test/live.test.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm test && npm run test:live"
+  },
+  "dependencies": {
+    "mcp-remote": "0.2.4"
+  }
+}
